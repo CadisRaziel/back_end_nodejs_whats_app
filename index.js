@@ -1,11 +1,7 @@
 const express = require("express");
 let http = require("http");
 const app = express();
-const path = require ("path");
-const favicon = require ("serve-favicon");
-const logger = requer ("morgan");
 const port = process.env.PORT || 5000;
-require ("dotenv").config ();
 let server = http.createServer(app);
 let io = require("socket.io")(server);
 
@@ -38,21 +34,16 @@ io.on("connection", (socket) => {
     });
   });
 
-app.use (logger ("dev"));
-app.use (express.json ());
-app.use (favicon (path.join ( dirname, "build", "favicon.ico")));
-app.use (express.static (path.join ( dirname, "build")));
-
   //*codigo json para o heroku
-  app.get ("/ *", function (req, res) {
-    res.sendFile (path.join (__dirname, "build", "index.html"));
-    });
+app.route("/check").get((req, res) => {
+  return res.json('Seu app esta trabalhando bem');
+})
 
 // server.listen(port, () => {
 //     console.log("server started");    
 // });
-app.listen (process.env.PORT || 5000, function () {
-  console.log ('Servidor ouvindo na porta 3000');  
+app.listen (port, function () {
+  console.log ('Servidor ouvindo na porta 5000');  
   });
   
 
