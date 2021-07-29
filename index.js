@@ -35,7 +35,7 @@ io.on("connection", (socket) => {
   });
 
   //*codigo json para o heroku
-app.get("/check", function (req, res) {
+app.get("/", function (req, res) {
   res.send("Seu app esta trabalhando bem")
 })
 
