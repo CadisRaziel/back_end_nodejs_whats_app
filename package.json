@@ -7,7 +7,7 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
     "socket.io": "^2.3.0"
-  },  
+  },
   "devDependencies": {},
   "scripts": {
     "dev": "nodemon index.js",
@@ -24,9 +24,6 @@
   },
   "homepage": "https://github.com/CadisRaziel/Back_end_Whats_clone#readme",
   "engines": {
-    "node": "14.17.1",
-    "npm": "6.14.13"
+    "node": "14.17.1"
   }
-  
-
 }
