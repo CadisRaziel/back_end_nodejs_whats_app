@@ -20,28 +20,30 @@ let clients = {};
 
 
 io.on("connection", (socket) => {
-    console.log("conectado");
-    console.log(socket.id, "entrou");
-    socket.on("entrar", (id) => {
-      console.log(id);
-      clients[id] = socket;
-      console.log(clients);
-    });
-    socket.on("message", (msg) => {
-      console.log(msg);
-      let targetId = msg.targetId;
-      if (clients[targetId]) clients[targetId].emit("message", msg);
-    });
+  console.log("conectado");
+  console.log(socket.id, "entrou");
+  socket.on("entrar", (id) => {
+    console.log(id);
+    clients[id] = socket;
+    console.log(clients);
   });
+  socket.on("message", (msg) => {
+    console.log(msg);
+    let targetId = msg.targetId;
+    if (clients[targetId]) clients[targetId].emit("message", msg);
+  });
+});
 
-  //*codigo json para o heroku
+//*codigo json para o heroku
 app.route("/check").get((req, res) => {
   return res.json('Seu app esta trabalhando bem');
 })
 
-server.listen(port, () => {
-    console.log("server started");    
+app.listen(process.env.PORT || 5000, function () {
+  console.log('Servidor ouvindo na porta 3000');
 });
+
+
 
 //oi
 
