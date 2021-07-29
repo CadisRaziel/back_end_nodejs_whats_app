@@ -1,0 +1,31 @@
+{
+  "name": "servidor_whats",
+  "version": "1.0.0",
+  "description": "Servidor para nosso app whatsapp",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "socket.io": "^2.3.0"
+  },  
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CadisRaziel/Back_end_Whats_clone.git"
+  },
+  "author": "Vitor Brussolo Zerbato",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CadisRaziel/Back_end_Whats_clone/issues"
+  },
+  "homepage": "https://github.com/CadisRaziel/Back_end_Whats_clone#readme",
+  "engines": {
+    "node": "14.17.1"
+  }
+  
+
+}
