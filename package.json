@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/CadisRaziel/Back_end_Whats_clone#readme",
   "engines": {
-    "node": "14.17.1"
+    "node": "14.x"
   }
 }
