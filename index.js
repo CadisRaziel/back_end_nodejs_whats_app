@@ -43,6 +43,7 @@ server.listen(port, () => {
     console.log("server started");    
 });
 
+//oi
 
 
 //se não houver nenhuma porta de acesso fornecida pelo ambiente local ele vai criar na porta 5000
