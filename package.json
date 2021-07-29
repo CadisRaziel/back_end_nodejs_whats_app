@@ -6,13 +6,11 @@
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
-    "serve": "^12.0.0",
     "socket.io": "^2.3.0"
-  },
+  },  
   "devDependencies": {},
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "dev": "nodemon index.js"    
   },
   "repository": {
     "type": "git",
@@ -23,8 +21,7 @@
   "bugs": {
     "url": "https://github.com/CadisRaziel/Back_end_Whats_clone/issues"
   },
-  "homepage": "https://github.com/CadisRaziel/Back_end_Whats_clone#readme",
-  "engines": {
-    "node": "14.x"
-  }
+  "homepage": "https://github.com/CadisRaziel/Back_end_Whats_clone#readme"
+  
+
 }

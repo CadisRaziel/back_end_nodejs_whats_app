@@ -1,7 +1,7 @@
 const express = require("express");
 let http = require("http");
 const app = express();
-const port = process.env.PORT || 5000;
+const port = 5000;
 let server = http.createServer(app);
 let io = require("socket.io")(server);
 
@@ -34,18 +34,15 @@ io.on("connection", (socket) => {
     });
   });
 
-  //*codigo json para o heroku
-app.route("/check").get((req, res) => {
-  return res.json('Seu app esta trabalhando bem');
-})
+//   //*codigo json para o heroku
+// app.route("/check").get((req, res) => {
+//   response res.json('Seu app esta trabalhando bem');
+// })
 
-// server.listen(port, () => {
-//     console.log("server started");    
-// });
-app.listen (port, function () {
-  console.log ('Servidor ouvindo na porta 5000');  
-  });
-  
+server.listen(port, () => {
+    console.log("server started");    
+});
+
 
 
 //se não houver nenhuma porta de acesso fornecida pelo ambiente local ele vai criar na porta 5000
