@@ -16,6 +16,9 @@ app.use(express.json());
 let clients = {};
 // app.use(cors);
 
+const routes = require('./routes');
+app.use('/routes', routes)
+
 //precisamos deixar tudo do cors comentando para poder abrir a connexão
 
 
